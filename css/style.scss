@@ -1,0 +1,722 @@
+@import "elements";
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  color: $whiteColor;
+}
+h2 {
+  font-size: 34px;
+}
+p {
+  font-size: 22px;
+  color: $whiteColor;
+}
+
+/*Header and Footer*/
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  background-color: $whiteColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.header__container {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a:hover {
+    color: $secondaryColor;
+  }
+}
+
+.header__container__logo {
+  width: 120px;
+  height: 45px;
+}
+
+nav.header__container__menu ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-left: 150px;
+}
+
+.header__container__menu li a {
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+  color: $primaryColor;
+}
+
+.header__container__search__input {
+  border: $primaryColor 1px solid;
+  padding: 15px;
+  border-radius: 25px;
+  input {
+    border: 0;
+  }
+}
+
+input:focus {
+  outline: none;
+}
+
+.footer_newsLetter {
+  width: 100%;
+  height: 110px;
+  background-color: $secondaryColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin-bottom: 100px;
+  form {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    align-items: center;
+    i {
+      color: $ligthGray;
+      margin-right: 15px;
+    }
+    input {
+      border: 0;
+      background-color: transparent;
+      color: $ligthGray;
+    }
+    input::placeholder {
+      color: $ligthGray;
+    }
+    button {
+      @include buttonBackground;
+    }
+    button:hover {
+      background-image: linear-gradient(
+        30deg,
+        rgba(186, 67, 252, 1) 0%,
+        rgba(104, 82, 237, 1) 100%
+      );
+    }
+  }
+}
+
+.footer_row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height: 220px;
+  h3 {
+    color: $primaryColor;
+  }
+  hr {
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.footer__row__about {
+  width: 35%;
+  padding: 25px;
+  @include textP;
+  text-align: left;
+}
+.footer__row__contact {
+  @include contactInfo;
+}
+
+.footer__row__links {
+  width: 30%;
+  padding: 25px;
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul a {
+    display: block;
+    text-decoration: none;
+    color: $primaryColor;
+  }
+}
+
+footer {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  @include textP;
+
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: $secondaryColor;
+  }
+}
+
+/*Home */
+
+.container,
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonials {
+  background-image: url("/img/shapes.png");
+  @include imgProp;
+}
+
+.slides {
+  width: 100%;
+}
+.slide__One {
+  width: 100%;
+  background-image: url("/img/slide1.jpg");
+  @include imgProp;
+  min-height: 800px;
+  max-height: 900px;
+  padding: 20%;
+}
+
+.slide__btn {
+  @include buttonBackground;
+}
+
+.slide__btn:hover {
+  background-image: linear-gradient(
+    30deg,
+    rgba(186, 67, 252, 1) 0%,
+    rgba(104, 82, 237, 1) 100%
+  );
+}
+
+.slide__about {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-image: url("/img/slide-about.jpg");
+  @include imgProp;
+  min-height: 700px;
+  max-height: 800px;
+  padding: 20%;
+  h1 {
+    margin: 450px 0 0 0;
+  }
+  p {
+    font-size: 18px;
+  }
+}
+
+.text__btn {
+  @include buttonTransparent;
+}
+
+.text__btn:hover {
+  color: $primaryColor;
+}
+
+.services,
+.counters,
+.howStarted,
+.aboutCounters,
+.skills,
+.tools,
+.contact {
+  width: 60%;
+  padding: 120px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.aboutCounters {
+  padding: 120px 0 0 0;
+}
+
+.projects {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 120px;
+}
+
+.services__row__start,
+.services__row__mid,
+.services__row__end {
+  width: 32%;
+}
+
+.services__row__mid {
+  margin-top: 30px;
+}
+
+.services__row__card {
+  padding: 40px;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border-radius: 15px;
+
+  i {
+    font-size: 25px;
+    color: $primaryColor;
+  }
+
+  h3 {
+    color: $primaryColor;
+    font-size: 22px;
+  }
+
+  @include textP;
+}
+
+.card__background {
+  background-image: $gradientColor;
+  h3,
+  p {
+    color: $whiteColor;
+  }
+  a {
+    color: $whiteColor;
+    text-decoration: none;
+  }
+  i {
+    font-size: 15px;
+    color: $whiteColor;
+  }
+}
+
+.services__row__end {
+  padding: 120px 30px;
+  color: $primaryColor;
+  p {
+    color: $darkGray;
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+  button {
+    @include buttonBackground;
+  }
+  button:hover {
+    background-image: linear-gradient(
+      30deg,
+      rgba(186, 67, 252, 1) 0%,
+      rgba(104, 82, 237, 1) 100%
+    );
+  }
+}
+
+.videoHome {
+  @include video;
+  background-image: url("/img/video.jpg");
+}
+
+.counters__card {
+  @include card;
+}
+
+.aboutCounters__card__double {
+  width: 60%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  padding: 30px 30px;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: -180px 10px 0 10px;
+  background-color: $whiteColor;
+  h2 {
+    color: $tertiaryColor;
+  }
+  hr {
+    width: 20%;
+    border-top: $tertiaryColor 1px solid;
+  }
+  h3 {
+    color: $primaryColor;
+  }
+  @include textP;
+}
+
+.aboutCounters__card {
+  @include card;
+  padding: 20px;
+  margin: -180px 0 0 0;
+}
+
+.projects__column {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  img {
+    width: 50%;
+  }
+}
+
+.projects__column__text__top,
+.projects__column__text__botton {
+  width: 50%;
+  margin-bottom: 40px;
+  align-items: center;
+}
+
+.text__btn__background {
+  @include buttonBackground;
+}
+.text__btn__background:hover {
+  background-image: linear-gradient(
+    30deg,
+    rgba(186, 67, 252, 1) 0%,
+    rgba(104, 82, 237, 1) 100%
+  );
+}
+
+@mixin textProjects {
+  h2 {
+    margin-top: 50px;
+    font-size: 28px;
+    color: $primaryColor;
+  }
+  @include textP;
+  p {
+    margin-bottom: 50px;
+  }
+}
+
+.projects__column__text__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 130px;
+  @include textProjects;
+}
+
+.projects__column__text__botton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 150px;
+  @include textProjects;
+}
+
+.testimonials {
+  background-color: $ligthGray;
+  padding: 5% 20%;
+  h2,
+  h3 {
+    color: #554d89;
+  }
+  @include textP;
+  p {
+    padding: 0 20%;
+    text-align: center;
+  }
+}
+
+.tools__card {
+  width: 30%;
+  color: #554d89;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  i {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  @include textP;
+}
+
+.callToAction {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: $ligthGray;
+  height: 170px;
+}
+
+.callToAction__container {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  h3 {
+    font-size: 22px;
+    color: $primaryColor;
+  }
+  span {
+    color: #ef7171;
+  }
+  button {
+    @include buttonBackground;
+  }
+  button:hover {
+    background-image: linear-gradient(
+      30deg,
+      rgba(186, 67, 252, 1) 0%,
+      rgba(104, 82, 237, 1) 100%
+    );
+  }
+}
+
+.community {
+  width: 100%;
+  padding: 120px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.community__column__img {
+  width: 55%;
+  height: 450px;
+  background-image: url("/img/community.png");
+  @include imgProp;
+}
+
+.community__column__text {
+  width: 40%;
+  display: flex;
+  padding: 0 15% 0 3%;
+  margin-top: 60px;
+  flex-direction: column;
+  justify-content: flex-start;
+  @include textP;
+}
+
+.support {
+  width: 60%;
+  padding-bottom: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.support_row {
+  width: 49%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  i {
+    width: 10%;
+    font-size: 25px;
+    color: $secondaryColor;
+    margin-left: 10px;
+  }
+  .support_row__text {
+    width: 80%;
+    h3 {
+      color: $primaryColor;
+      padding: 0;
+      margin: 0;
+    }
+    @include textP;
+    button {
+      @include buttonTransparent;
+    }
+    button:hover {
+      color: $primaryColor;
+    }
+  }
+}
+
+/* About */
+
+.videoAbout {
+  @include video;
+  background-image: url("/img/video-about.jpg");
+}
+
+.skill__row {
+  width: 48%;
+  h2 {
+    color: $primaryColor;
+  }
+  @include textP;
+  button {
+    @include buttonBackground;
+  }
+}
+
+.howStarted__row {
+  width: 48%;
+  h2 {
+    color: $primaryColor;
+  }
+  @include textP;
+  p {
+    padding: 10px 35px;
+    text-align: justify;
+  }
+  button {
+    @include buttonBackground;
+  }
+}
+
+.skill__row__progress {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  p {
+    width: 46%;
+    color: $darkGray;
+    margin: 0 5px;
+  }
+}
+
+.skill__row__progress__textLeft {
+  text-align: left;
+}
+
+.skill__row__progress__textRigth {
+  text-align: right;
+}
+
+.progress__bar {
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  margin: 20px 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress__bar span {
+  height: 5px;
+  display: block;
+  color: rgb(255, 251, 251);
+  line-height: 5px;
+  position: absolute;
+  text-align: end;
+  padding-right: 5px;
+}
+
+.progress__bar__background {
+  width: 100%;
+  background-color: $ligthGray;
+  span {
+    background-color: $secondaryColor;
+  }
+}
+
+/* Contact */
+
+.slide__contact {
+  width: 100%;
+  background-color: $ligthGray;
+  background-image: url("/img/shapes.png");
+  @include imgProp;
+  min-height: 450px;
+  max-height: 500px;
+  padding: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  h1 {
+    color: $primaryColor;
+    margin: 0;
+  }
+  p {
+    color: $darkGray;
+  }
+  button {
+    @include buttonBackground;
+  }
+  button:hover {
+    background-image: linear-gradient(
+      30deg,
+      rgba(186, 67, 252, 1) 0%,
+      rgba(104, 82, 237, 1) 100%
+    );
+  }
+  .buttonTransparent {
+    background-image: none;
+    @include buttonTransparent;
+  }
+  .buttonTransparent:hover {
+    background-image: none;
+    @include buttonTransparent;
+  }
+}
+
+.contact__row {
+  width: 48%;
+  h2 {
+    color: $primaryColor;
+  }
+  @include textP;
+  .contact__row__contactInfo {
+    width: 100%;
+    @include contactInfo;
+  }
+}
+
+.contact__row__form {
+  margin-top: 20px;
+  .form__name,
+  .form__phone {
+    @include inputForm;
+  }
+  .form__name:focus,
+  .form__phone:focus {
+    border: $secondaryColor 1px solid;
+  }
+
+  textarea {
+    resize: none;
+    @include inputForm;
+    width: 93%;
+  }
+
+  textarea:focus {
+    outline: none;
+    border: $secondaryColor 1px solid;
+  }
+
+  button {
+    @include buttonBackground;
+  }
+  button:hover {
+    background-image: linear-gradient(
+      30deg,
+      rgba(186, 67, 252, 1) 0%,
+      rgba(104, 82, 237, 1) 100%
+    );
+  }
+}
+
+.map {
+  width: 100%;
+  background-image: url("/img/map.png");
+  @include imgProp;
+  min-height: 350px;
+  height: 450px;
+  max-height: 550px;
+}

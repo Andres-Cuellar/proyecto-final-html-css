@@ -1,0 +1,105 @@
+$primaryColor: #554d89;
+$secondaryColor: #6852ed;
+$tertiaryColor: #ba43fc;
+$whiteColor: #fff;
+$darkGray: #656270;
+$ligthGray: #f6f7fa;
+$gradientColor: linear-gradient(
+  197deg,
+  rgba(186, 67, 252, 1) 0%,
+  rgba(104, 82, 237, 1) 100%
+);
+
+@mixin buttonBackground {
+  border: none;
+  background-image: linear-gradient(
+    197deg,
+    rgba(186, 67, 252, 1) 0%,
+    rgba(104, 82, 237, 1) 100%
+  );
+  color: white;
+  padding: 20px 50px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+@mixin buttonTransparent {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: $secondaryColor;
+  padding: 10px 10px;
+  border-radius: 30px;
+  i {
+    font-size: 16px;
+  }
+}
+
+@mixin video {
+  width: 100%;
+  min-height: 450px;
+  max-height: 550px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10% 20%;
+  h2 {
+    color: $primaryColor;
+  }
+  p {
+    color: $darkGray;
+    font-size: 14px;
+    margin-bottom: 50px;
+  }
+}
+
+@mixin card {
+  width: 30%;
+  text-align: center;
+  padding: 30px 30px;
+  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  margin: -180px 10px 0 10px;
+  background-color: $whiteColor;
+  h2 {
+    color: $tertiaryColor;
+  }
+  hr {
+    width: 20%;
+    border-top: $tertiaryColor 1px solid;
+  }
+  h3 {
+    color: $primaryColor;
+  }
+  @include textP;
+}
+
+@mixin textP {
+  p {
+    color: $darkGray;
+    font-size: 14px;
+  }
+}
+
+@mixin contactInfo {
+  padding: 10px;
+  i {
+    margin-right: 10px;
+  }
+  p {
+    color: $primaryColor;
+    font-size: 14px;
+  }
+}
+
+@mixin inputForm {
+  width: 45%;
+  border: $darkGray 1px solid;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 5px 5px 10px 5px;
+}
+@mixin imgProp {
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

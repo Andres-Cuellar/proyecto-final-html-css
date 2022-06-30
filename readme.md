@@ -1,0 +1,1 @@
+Actualmente no tiene responsive, diseño en 1920px
