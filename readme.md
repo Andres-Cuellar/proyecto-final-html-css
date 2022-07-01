@@ -1,4 +1,6 @@
-Actualmente no tiene responsive, diseño en 1920px
+Web desplegada en Netlify:
+https://elipso.netlify.app
+
 
 CSS:
 Desarrollado en Sass, con elementos (como botones cards etc, en _elements.scss),
