@@ -11,6 +11,11 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  overflow-x: hidden;
 }
 
 h1 {
@@ -223,17 +228,27 @@ footer {
   footer {
     width: 70%;
   }
-}
-
-@media (max-width: 768px) {
-  footer {
-    width: 80%;
-  }
   .footer_newsLetter {
     form {
       width: 90%;
       font-size: 18px;
     }
+  }
+}
+
+@media (max-width: 849px) {
+  .footer_newsLetter {
+    form {
+      i {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    width: 80%;
   }
 
   .footer__row__links {
@@ -901,52 +916,30 @@ footer {
   }
 }
 
-.videoAbout {
-  @include video;
-  background-image: url("/img/video-about.jpg");
+@media (max-width: 1280px) {
+  .slide__about {
+    min-height: 600px;
+    max-height: 700px;
+  }
 }
 
-.aboutCounters {
-  padding: 120px 0 0 0;
+@media (max-width: 768px) {
+  .slide__about {
+    min-height: 500px;
+    max-height: 600px;
+    h1 {
+      margin: 350px 0 0 0;
+    }
+  }
 }
 
-.aboutCounters__card__double {
-  width: 60%;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  padding: 30px 30px;
-  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  margin: -180px 10px 0 10px;
-  background-color: $whiteColor;
-  h2 {
-    color: $tertiaryColor;
-  }
-  hr {
-    width: 20%;
-    border-top: $tertiaryColor 1px solid;
-  }
-  h3 {
-    color: $primaryColor;
-  }
-  @include textP;
-}
-
-.aboutCounters__card {
-  @include card;
-  padding: 20px;
-  margin: -180px 0 0 0;
-}
-
-.skill__row {
-  width: 48%;
-  h2 {
-    color: $primaryColor;
-  }
-  @include textP;
-  button {
-    @include buttonBackground;
+@media (max-width: 475px) {
+  .slide__about {
+    min-height: 400px;
+    max-height: 500px;
+    h1 {
+      margin: 250px 0 0 0;
+    }
   }
 }
 
@@ -960,6 +953,72 @@ footer {
     padding: 10px 35px;
     text-align: justify;
   }
+  button {
+    @include buttonBackground;
+  }
+}
+
+@media (max-width: 1280px) {
+  .howStarted__row {
+    p {
+      padding: 10px 25px;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .howStarted__row {
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+.videoAbout {
+  @include video;
+  p {
+    color: $whiteColor;
+  }
+  background-image: url("/img/video-about.jpg");
+}
+
+.aboutCounters {
+  padding: 120px 0 0 0;
+  i {
+    font-size: 25px;
+    color: $secondaryColor;
+  }
+}
+
+.aboutCounters__card {
+  @include card;
+  padding: 20px;
+  margin: -180px 0 0 0;
+}
+
+@media (max-width: 768px) {
+  .aboutCounters__card {
+    width: 48%;
+  }
+
+  .aboutCounters__card__end {
+    width: 98%;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 475px) {
+  .aboutCounters__card {
+    width: 98%;
+    margin-top: 25px;
+  }
+}
+
+.skill__row {
+  width: 48%;
+  h2 {
+    color: $primaryColor;
+  }
+  @include textP;
   button {
     @include buttonBackground;
   }
@@ -1008,6 +1067,13 @@ footer {
   background-color: $ligthGray;
   span {
     background-color: $secondaryColor;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill__row {
+    width: 98%;
+    margin-bottom: 50px;
   }
 }
 
@@ -1094,6 +1160,26 @@ footer {
       rgba(186, 67, 252, 1) 0%,
       rgba(104, 82, 237, 1) 100%
     );
+  }
+}
+
+@media (max-width: 768px) {
+  .contact__row {
+    width: 100%;
+  }
+}
+
+@media (max-width: 475px) {
+  .contact__row__form {
+    margin-top: 20px;
+    .form__name,
+    .form__phone {
+      width: 94%;
+    }
+
+    textarea {
+      width: 94%;
+    }
   }
 }
 

@@ -11,6 +11,11 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  overflow-x: hidden;
 }
 
 h1 {
@@ -319,15 +324,20 @@ footer a:hover {
   footer {
     width: 70%;
   }
-}
-@media (max-width: 768px) {
-  footer {
-    width: 80%;
-  }
 
   .footer_newsLetter form {
     width: 90%;
     font-size: 18px;
+  }
+}
+@media (max-width: 849px) {
+  .footer_newsLetter form i {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  footer {
+    width: 80%;
   }
 
   .footer__row__links {
@@ -1112,6 +1122,64 @@ footer a:hover {
   font-size: 18px;
 }
 
+@media (max-width: 1280px) {
+  .slide__about {
+    min-height: 600px;
+    max-height: 700px;
+  }
+}
+@media (max-width: 768px) {
+  .slide__about {
+    min-height: 500px;
+    max-height: 600px;
+  }
+  .slide__about h1 {
+    margin: 350px 0 0 0;
+  }
+}
+@media (max-width: 475px) {
+  .slide__about {
+    min-height: 400px;
+    max-height: 500px;
+  }
+  .slide__about h1 {
+    margin: 250px 0 0 0;
+  }
+}
+.howStarted__row {
+  width: 48%;
+}
+.howStarted__row h2 {
+  color: #554d89;
+}
+.howStarted__row p {
+  color: #656270;
+  font-size: 14px;
+}
+.howStarted__row p {
+  padding: 10px 35px;
+  text-align: justify;
+}
+.howStarted__row button {
+  border: none;
+  background-image: linear-gradient(197deg, rgb(186, 67, 252) 0%, rgb(104, 82, 237) 100%);
+  color: white;
+  padding: 20px 50px;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+@media (max-width: 1280px) {
+  .howStarted__row p {
+    padding: 10px 25px;
+  }
+}
+@media (max-width: 475px) {
+  .howStarted__row {
+    width: 90%;
+    padding: 15px;
+  }
+}
 .videoAbout {
   width: 100%;
   min-height: 450px;
@@ -1130,35 +1198,16 @@ footer a:hover {
   font-size: 14px;
   margin-bottom: 50px;
 }
+.videoAbout p {
+  color: #fff;
+}
 
 .aboutCounters {
   padding: 120px 0 0 0;
 }
-
-.aboutCounters__card__double {
-  width: 60%;
-  text-align: center;
-  display: flex;
-  justify-content: space-around;
-  padding: 30px 30px;
-  box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-  margin: -180px 10px 0 10px;
-  background-color: #fff;
-}
-.aboutCounters__card__double h2 {
-  color: #ba43fc;
-}
-.aboutCounters__card__double hr {
-  width: 20%;
-  border-top: #ba43fc 1px solid;
-}
-.aboutCounters__card__double h3 {
-  color: #554d89;
-}
-.aboutCounters__card__double p {
-  color: #656270;
-  font-size: 14px;
+.aboutCounters i {
+  font-size: 25px;
+  color: #6852ed;
 }
 
 .aboutCounters__card {
@@ -1187,6 +1236,22 @@ footer a:hover {
   font-size: 14px;
 }
 
+@media (max-width: 768px) {
+  .aboutCounters__card {
+    width: 48%;
+  }
+
+  .aboutCounters__card__end {
+    width: 98%;
+    margin-top: 25px;
+  }
+}
+@media (max-width: 475px) {
+  .aboutCounters__card {
+    width: 98%;
+    margin-top: 25px;
+  }
+}
 .skill__row {
   width: 48%;
 }
@@ -1198,29 +1263,6 @@ footer a:hover {
   font-size: 14px;
 }
 .skill__row button {
-  border: none;
-  background-image: linear-gradient(197deg, rgb(186, 67, 252) 0%, rgb(104, 82, 237) 100%);
-  color: white;
-  padding: 20px 50px;
-  border-radius: 30px;
-  transition: 0.5s;
-}
-
-.howStarted__row {
-  width: 48%;
-}
-.howStarted__row h2 {
-  color: #554d89;
-}
-.howStarted__row p {
-  color: #656270;
-  font-size: 14px;
-}
-.howStarted__row p {
-  padding: 10px 35px;
-  text-align: justify;
-}
-.howStarted__row button {
   border: none;
   background-image: linear-gradient(197deg, rgb(186, 67, 252) 0%, rgb(104, 82, 237) 100%);
   color: white;
@@ -1275,6 +1317,12 @@ footer a:hover {
   background-color: #6852ed;
 }
 
+@media (max-width: 768px) {
+  .skill__row {
+    width: 98%;
+    margin-bottom: 50px;
+  }
+}
 /* Contact */
 .slide__contact {
   width: 100%;
@@ -1393,6 +1441,23 @@ footer a:hover {
   background-image: linear-gradient(30deg, rgb(186, 67, 252) 0%, rgb(104, 82, 237) 100%);
 }
 
+@media (max-width: 768px) {
+  .contact__row {
+    width: 100%;
+  }
+}
+@media (max-width: 475px) {
+  .contact__row__form {
+    margin-top: 20px;
+  }
+  .contact__row__form .form__name,
+.contact__row__form .form__phone {
+    width: 94%;
+  }
+  .contact__row__form textarea {
+    width: 94%;
+  }
+}
 .map {
   width: 100%;
   background-image: url("/img/map.png");
