@@ -249,7 +249,7 @@ input:focus {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 220px;
+  height: auto;
 }
 .footer_row h3 {
   color: #554d89;
@@ -261,7 +261,7 @@ input:focus {
 }
 
 .footer__row__about {
-  width: 35%;
+  width: 33%;
   padding: 25px;
   text-align: left;
 }
@@ -282,7 +282,7 @@ input:focus {
 }
 
 .footer__row__links {
-  width: 30%;
+  width: 25%;
   padding: 25px;
 }
 .footer__row__links ul {
@@ -331,6 +331,20 @@ footer a:hover {
   }
 
   .footer__row__links {
+    display: none;
+  }
+
+  .footer__row__about {
+    width: 40%;
+  }
+
+  .footer__row__contact {
+    width: 45%;
+    margin-left: 10px;
+  }
+}
+@media (max-width: 678px) {
+  .footer_newsLetter {
     display: none;
   }
 }
@@ -517,6 +531,18 @@ footer a:hover {
   font-size: 14px;
 }
 
+@media (max-width: 928px) {
+  .services__row__start,
+.services__row__mid {
+    width: 45%;
+  }
+
+  .services__row__end {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
 @media (max-width: 768px) {
   .services__row__start,
 .services__row__mid {
@@ -624,6 +650,38 @@ footer a:hover {
   font-size: 14px;
 }
 
+@media (max-width: 1117px) {
+  .counters__card {
+    width: 30%;
+    text-align: center;
+    padding: 30px 30px;
+    box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    margin: -180px 10px 0 10px;
+    background-color: #fff;
+    width: 45%;
+    margin-top: -120px;
+    margin-bottom: 150px;
+  }
+  .counters__card h2 {
+    color: #ba43fc;
+  }
+  .counters__card hr {
+    width: 20%;
+    border-top: #ba43fc 1px solid;
+  }
+  .counters__card h3 {
+    color: #554d89;
+  }
+  .counters__card p {
+    color: #656270;
+    font-size: 14px;
+  }
+
+  .end {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 768px) {
   .counters__card {
     width: 30%;
@@ -810,6 +868,11 @@ footer a:hover {
   font-size: 14px;
 }
 
+@media (max-width: 1088px) {
+  .tools__card {
+    width: 45%;
+  }
+}
 @media (max-width: 768px) {
   .tools__card {
     width: 45%;
@@ -1001,10 +1064,14 @@ footer a:hover {
   .support {
     width: 70%;
   }
+
+  .support_row {
+    width: 47%;
+  }
 }
 @media (max-width: 768px) {
   .support {
-    width: 70%;
+    width: 80%;
   }
 
   .support_row {

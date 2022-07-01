@@ -166,7 +166,7 @@ input:focus {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 220px;
+  height: auto;
   h3 {
     color: $primaryColor;
   }
@@ -178,7 +178,7 @@ input:focus {
 }
 
 .footer__row__about {
-  width: 35%;
+  width: 33%;
   padding: 25px;
   @include textP;
   text-align: left;
@@ -188,7 +188,7 @@ input:focus {
 }
 
 .footer__row__links {
-  width: 30%;
+  width: 25%;
   padding: 25px;
   ul {
     display: flex;
@@ -237,6 +237,20 @@ footer {
   }
 
   .footer__row__links {
+    display: none;
+  }
+
+  .footer__row__about {
+    width: 40%;
+  }
+  .footer__row__contact {
+    width: 45%;
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 678px) {
+  .footer_newsLetter {
     display: none;
   }
 }
@@ -411,6 +425,18 @@ footer {
   @include textP;
 }
 
+@media (max-width: 928px) {
+  .services__row__start,
+  .services__row__mid {
+    width: 45%;
+  }
+  .services__row__end {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .services__row__start,
   .services__row__mid {
@@ -481,6 +507,18 @@ footer {
 
 .counters__card {
   @include card;
+}
+
+@media (max-width: 1117px) {
+  .counters__card {
+    @include card;
+    width: 45%;
+    margin-top: -120px;
+    margin-bottom: 150px;
+  }
+  .end {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -632,6 +670,12 @@ footer {
     font-size: 22px;
   }
   @include textP;
+}
+
+@media (max-width: 1088px) {
+  .tools__card {
+    width: 45%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -808,11 +852,14 @@ footer {
   .support {
     width: 70%;
   }
+  .support_row {
+    width: 47%;
+  }
 }
 
 @media (max-width: 768px) {
   .support {
-    width: 70%;
+    width: 80%;
   }
 
   .support_row {
