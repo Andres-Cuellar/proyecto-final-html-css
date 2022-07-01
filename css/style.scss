@@ -250,11 +250,9 @@ footer {
   footer {
     width: 80%;
   }
-
   .footer__row__links {
     display: none;
   }
-
   .footer__row__about {
     width: 40%;
   }
@@ -280,7 +278,6 @@ footer {
   .footer_newsLetter {
     display: none;
   }
-
   .footer__row__about {
     width: 100%;
   }
@@ -426,17 +423,14 @@ footer {
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   border-radius: 15px;
-
   i {
     font-size: 25px;
     color: $primaryColor;
   }
-
   h3 {
     color: $primaryColor;
     font-size: 22px;
   }
-
   @include textP;
 }
 
@@ -604,11 +598,9 @@ footer {
   .projects__column__text__top {
     padding-right: 30px;
   }
-
   .projects__column__text__botton {
     padding-left: 30px;
   }
-
   .projects__column__text__btns {
     .text__btn {
       margin-top: 20px;
@@ -624,7 +616,6 @@ footer {
       margin-bottom: 20px;
     }
   }
-
   .projects__column__text__top,
   .projects__column__text__botton {
     width: 100%;
@@ -800,7 +791,6 @@ footer {
     background-image: url("/img/community.png");
     @include imgProp;
   }
-
   .community__column__text {
     padding: 0 5% 0 4%;
   }
@@ -813,7 +803,6 @@ footer {
     background-image: url("/img/community.png");
     @include imgProp;
   }
-
   .community__column__text {
     width: 100%;
     padding: 0 15% 0 10%;
@@ -876,7 +865,6 @@ footer {
   .support {
     width: 80%;
   }
-
   .support_row {
     width: 47%;
     i {
@@ -889,7 +877,6 @@ footer {
   .support {
     width: 90%;
   }
-
   .support_row {
     width: 100%;
   }
@@ -999,7 +986,6 @@ footer {
   .aboutCounters__card {
     width: 48%;
   }
-
   .aboutCounters__card__end {
     width: 98%;
     margin-top: 25px;
@@ -1139,18 +1125,15 @@ footer {
   .form__phone:focus {
     border: $secondaryColor 1px solid;
   }
-
   textarea {
     resize: none;
     @include inputForm;
     width: 93%;
   }
-
   textarea:focus {
     outline: none;
     border: $secondaryColor 1px solid;
   }
-
   button {
     @include buttonBackground;
   }
@@ -1176,7 +1159,6 @@ footer {
     .form__phone {
       width: 94%;
     }
-
     textarea {
       width: 94%;
     }
@@ -1190,14 +1172,4 @@ footer {
   min-height: 350px;
   height: 450px;
   max-height: 550px;
-}
-
-/* Query*/
-@media (max-width: 1280px) {
-}
-
-@media (max-width: 768px) {
-}
-
-@media (max-width: 475px) {
 }
